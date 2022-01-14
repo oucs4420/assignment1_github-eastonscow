@@ -10,9 +10,23 @@ using namespace std;
 
 int main( int argc, char* argv[] )
 {
+    string line ; 
     // just to get you started, this is how to refer to the arguments that were passed
-    for (int arg = 0; arg < argc; ++arg)
-            std::cout << "argv[" << arg << "]: " << argv[arg] << '\n' ;
-
+    cout << "program: ./filesize" << '\n' ; 
+    for (int arg = 1; arg < argc; ++arg){
+        //std::cout << "argv[" << arg << "]: " << argv[arg] << '\n' ;
+        int numOfLines = 0 ;
+        ifstream myfile(argv[arg]) ;  
+        //if file cannot open output is -1
+        if(myfile.fail()){
+            numOfLines = -1 ; 
+        }
+        //gets line and adds 1 to count after each line
+        while(getline(myfile, line)){
+            numOfLines ++ ; 
+        }
+        string file(argv[arg]) ; // used this to remove ./ from beginning of file 
+        cout << file.erase(0,2) << ": " <<  numOfLines << '\n' ; //prints the output
+    }
     exit(0); // this means that the program executed correctly!
 }
