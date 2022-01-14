@@ -25,8 +25,8 @@ int main( int argc, char* argv[] )
         while(getline(myfile, line)){
             numOfLines ++ ; 
         }
-        string file(argv[arg]) ; // used this to remove ./ from beginning of file 
-        cout << file.erase(0,2) << ": " <<  numOfLines << '\n' ; //prints the output
+        string file(argv[arg]) ; // used this to remove ./ from beginning of file path
+        cout << " " << file.erase(0,2) << ": " <<  numOfLines << '\n' ; //prints the output
     }
     exit(0); // this means that the program executed correctly!
 }
