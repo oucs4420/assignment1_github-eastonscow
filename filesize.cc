@@ -26,7 +26,7 @@ int main( int argc, char* argv[] )
             numOfLines ++ ; 
         }
         //string file(argv[arg]) ; 
-        cout << '\t' << argv[arg] << ": " <<  numOfLines << endl ; //prints the output
+        cout << " " << argv[arg] << ": " <<  numOfLines << endl ; //prints the output
     }
     exit(0); // this means that the program executed correctly!
 }
