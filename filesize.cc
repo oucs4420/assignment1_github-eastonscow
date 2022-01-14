@@ -12,7 +12,7 @@ int main( int argc, char* argv[] )
 {
     string line ; 
     // just to get you started, this is how to refer to the arguments that were passed
-    cout << "program: ./filesize" << '\n' ; 
+    cout << "program: ./filesize" << endl ; 
     for (int arg = 1; arg < argc; ++arg){
         //std::cout << "argv[" << arg << "]: " << argv[arg] << '\n' ;
         int numOfLines = 0 ;
@@ -25,8 +25,8 @@ int main( int argc, char* argv[] )
         while(getline(myfile, line)){
             numOfLines ++ ; 
         }
-        string file(argv[arg]) ; // used this to remove ./ from beginning of file path
-        cout << " " << file.erase(0,2) << ": " <<  numOfLines << '\n' ; //prints the output
+        //string file(argv[arg]) ; // used this to remove ./ from beginning of file path
+        cout << argv[arg] << ": " <<  numOfLines << endl ; //prints the output
     }
     exit(0); // this means that the program executed correctly!
 }
